@@ -13,6 +13,17 @@
 		807CE92B2631C5CD00900F95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807CE9292631C5CD00900F95 /* Main.storyboard */; };
 		807CE92D2631C5CE00900F95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807CE92C2631C5CE00900F95 /* Assets.xcassets */; };
 		807CE9302631C5CE00900F95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807CE92E2631C5CE00900F95 /* LaunchScreen.storyboard */; };
+		807CE93A2631D16700900F95 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9392631D16700900F95 /* Endpoint.swift */; };
+		807CE93D2631E11C00900F95 /* ItunesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE93C2631E11C00900F95 /* ItunesEndpoint.swift */; };
+		807CE9412631EDD100900F95 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9402631EDD100900F95 /* Album.swift */; };
+		807CE9442631F0E100900F95 /* NetworkCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9432631F0E100900F95 /* NetworkCaller.swift */; };
+		807CE9472632178600900F95 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9462632178600900F95 /* NetworkErrors.swift */; };
+		80B9D7692639F4B100FACE63 /* LocalEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D7682639F4B100FACE63 /* LocalEndpoint.swift */; };
+		80B9D76D2639FCC100FACE63 /* Itunes100.json in Resources */ = {isa = PBXBuildFile; fileRef = 80B9D76C2639FCC100FACE63 /* Itunes100.json */; };
+		80B9D77A263A057300FACE63 /* RecipiesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D779263A057300FACE63 /* RecipiesEndpoint.swift */; };
+		80B9D77E263A067A00FACE63 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D77D263A067A00FACE63 /* Recipe.swift */; };
+		80B9D783263A0C5800FACE63 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D782263A0C5800FACE63 /* Alert.swift */; };
+		80B9D788263A164B00FACE63 /* CheckWhichError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D787263A164B00FACE63 /* CheckWhichError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		807CE92C2631C5CE00900F95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		807CE92F2631C5CE00900F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		807CE9312631C5CE00900F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		807CE9392631D16700900F95 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		807CE93C2631E11C00900F95 /* ItunesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesEndpoint.swift; sourceTree = "<group>"; };
+		807CE9402631EDD100900F95 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		807CE9432631F0E100900F95 /* NetworkCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCaller.swift; sourceTree = "<group>"; };
+		807CE9462632178600900F95 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		80B9D7682639F4B100FACE63 /* LocalEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEndpoint.swift; sourceTree = "<group>"; };
+		80B9D76C2639FCC100FACE63 /* Itunes100.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Itunes100.json; sourceTree = "<group>"; };
+		80B9D779263A057300FACE63 /* RecipiesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesEndpoint.swift; sourceTree = "<group>"; };
+		80B9D77D263A067A00FACE63 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		80B9D782263A0C5800FACE63 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		80B9D787263A164B00FACE63 /* CheckWhichError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckWhichError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +78,58 @@
 		807CE9222631C5CD00900F95 /* ItunesTopOneHundred */ = {
 			isa = PBXGroup;
 			children = (
+				80B9D76C2639FCC100FACE63 /* Itunes100.json */,
+				80B9D781263A0C0100FACE63 /* Helpers */,
+				80B9D761263876C100FACE63 /* Views */,
+				807CE93F2631E36400900F95 /* Model */,
+				807CE9382631CCF600900F95 /* Services */,
 				807CE9232631C5CD00900F95 /* AppDelegate.swift */,
 				807CE9252631C5CD00900F95 /* SceneDelegate.swift */,
-				807CE9272631C5CD00900F95 /* ViewController.swift */,
 				807CE9292631C5CD00900F95 /* Main.storyboard */,
 				807CE92C2631C5CE00900F95 /* Assets.xcassets */,
 				807CE92E2631C5CE00900F95 /* LaunchScreen.storyboard */,
 				807CE9312631C5CE00900F95 /* Info.plist */,
 			);
 			path = ItunesTopOneHundred;
+			sourceTree = "<group>";
+		};
+		807CE9382631CCF600900F95 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				807CE9392631D16700900F95 /* Endpoint.swift */,
+				807CE93C2631E11C00900F95 /* ItunesEndpoint.swift */,
+				80B9D779263A057300FACE63 /* RecipiesEndpoint.swift */,
+				80B9D7682639F4B100FACE63 /* LocalEndpoint.swift */,
+				807CE9432631F0E100900F95 /* NetworkCaller.swift */,
+				807CE9462632178600900F95 /* NetworkErrors.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		807CE93F2631E36400900F95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				807CE9402631EDD100900F95 /* Album.swift */,
+				80B9D77D263A067A00FACE63 /* Recipe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		80B9D761263876C100FACE63 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				807CE9272631C5CD00900F95 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		80B9D781263A0C0100FACE63 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				80B9D782263A0C5800FACE63 /* Alert.swift */,
+				80B9D787263A164B00FACE63 /* CheckWhichError.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +192,7 @@
 				807CE9302631C5CE00900F95 /* LaunchScreen.storyboard in Resources */,
 				807CE92D2631C5CE00900F95 /* Assets.xcassets in Resources */,
 				807CE92B2631C5CD00900F95 /* Main.storyboard in Resources */,
+				80B9D76D2639FCC100FACE63 /* Itunes100.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +203,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807CE9442631F0E100900F95 /* NetworkCaller.swift in Sources */,
 				807CE9282631C5CD00900F95 /* ViewController.swift in Sources */,
 				807CE9242631C5CD00900F95 /* AppDelegate.swift in Sources */,
+				807CE93D2631E11C00900F95 /* ItunesEndpoint.swift in Sources */,
+				807CE93A2631D16700900F95 /* Endpoint.swift in Sources */,
+				80B9D7692639F4B100FACE63 /* LocalEndpoint.swift in Sources */,
+				807CE9472632178600900F95 /* NetworkErrors.swift in Sources */,
+				80B9D783263A0C5800FACE63 /* Alert.swift in Sources */,
+				80B9D788263A164B00FACE63 /* CheckWhichError.swift in Sources */,
 				807CE9262631C5CD00900F95 /* SceneDelegate.swift in Sources */,
+				80B9D77A263A057300FACE63 /* RecipiesEndpoint.swift in Sources */,
+				807CE9412631EDD100900F95 /* Album.swift in Sources */,
+				80B9D77E263A067A00FACE63 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
