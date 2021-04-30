@@ -1,5 +1,5 @@
 //
-//  RecepiesEndpoint.swift
+//  RecepesEndpoint.swift
 //  ItunesTopOneHundred
 //
 //  Created by Anthony H on 4/28/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RecipiesEndpoint: Endpoint {
+enum RecipesEndpoint: Endpoint {
     
     case getEndpoint
     

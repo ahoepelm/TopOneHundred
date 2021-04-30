@@ -20,10 +20,12 @@
 		807CE9472632178600900F95 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9462632178600900F95 /* NetworkErrors.swift */; };
 		80B9D7692639F4B100FACE63 /* LocalEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D7682639F4B100FACE63 /* LocalEndpoint.swift */; };
 		80B9D76D2639FCC100FACE63 /* Itunes100.json in Resources */ = {isa = PBXBuildFile; fileRef = 80B9D76C2639FCC100FACE63 /* Itunes100.json */; };
-		80B9D77A263A057300FACE63 /* RecipiesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D779263A057300FACE63 /* RecipiesEndpoint.swift */; };
+		80B9D77A263A057300FACE63 /* RecipesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D779263A057300FACE63 /* RecipesEndpoint.swift */; };
 		80B9D77E263A067A00FACE63 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D77D263A067A00FACE63 /* Recipe.swift */; };
 		80B9D783263A0C5800FACE63 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D782263A0C5800FACE63 /* Alert.swift */; };
 		80B9D788263A164B00FACE63 /* CheckWhichError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D787263A164B00FACE63 /* CheckWhichError.swift */; };
+		80CC259C263C586B006148CB /* AlbumTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CC259B263C586B006148CB /* AlbumTableViewModel.swift */; };
+		80CC259F263C7CDE006148CB /* RecipeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CC259E263C7CDE006148CB /* RecipeTableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +44,12 @@
 		807CE9462632178600900F95 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		80B9D7682639F4B100FACE63 /* LocalEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEndpoint.swift; sourceTree = "<group>"; };
 		80B9D76C2639FCC100FACE63 /* Itunes100.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Itunes100.json; sourceTree = "<group>"; };
-		80B9D779263A057300FACE63 /* RecipiesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesEndpoint.swift; sourceTree = "<group>"; };
+		80B9D779263A057300FACE63 /* RecipesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesEndpoint.swift; sourceTree = "<group>"; };
 		80B9D77D263A067A00FACE63 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		80B9D782263A0C5800FACE63 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		80B9D787263A164B00FACE63 /* CheckWhichError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckWhichError.swift; sourceTree = "<group>"; };
+		80CC259B263C586B006148CB /* AlbumTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewModel.swift; sourceTree = "<group>"; };
+		80CC259E263C7CDE006148CB /* RecipeTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		807CE9222631C5CD00900F95 /* ItunesTopOneHundred */ = {
 			isa = PBXGroup;
 			children = (
+				80CC259A263C57BF006148CB /* ViewModels */,
 				80B9D76C2639FCC100FACE63 /* Itunes100.json */,
 				80B9D781263A0C0100FACE63 /* Helpers */,
 				80B9D761263876C100FACE63 /* Views */,
@@ -98,7 +103,7 @@
 			children = (
 				807CE9392631D16700900F95 /* Endpoint.swift */,
 				807CE93C2631E11C00900F95 /* ItunesEndpoint.swift */,
-				80B9D779263A057300FACE63 /* RecipiesEndpoint.swift */,
+				80B9D779263A057300FACE63 /* RecipesEndpoint.swift */,
 				80B9D7682639F4B100FACE63 /* LocalEndpoint.swift */,
 				807CE9432631F0E100900F95 /* NetworkCaller.swift */,
 				807CE9462632178600900F95 /* NetworkErrors.swift */,
@@ -130,6 +135,15 @@
 				80B9D787263A164B00FACE63 /* CheckWhichError.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		80CC259A263C57BF006148CB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				80CC259B263C586B006148CB /* AlbumTableViewModel.swift */,
+				80CC259E263C7CDE006148CB /* RecipeTableViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,15 +219,17 @@
 			files = (
 				807CE9442631F0E100900F95 /* NetworkCaller.swift in Sources */,
 				807CE9282631C5CD00900F95 /* ViewController.swift in Sources */,
+				80CC259F263C7CDE006148CB /* RecipeTableViewModel.swift in Sources */,
 				807CE9242631C5CD00900F95 /* AppDelegate.swift in Sources */,
 				807CE93D2631E11C00900F95 /* ItunesEndpoint.swift in Sources */,
 				807CE93A2631D16700900F95 /* Endpoint.swift in Sources */,
+				80CC259C263C586B006148CB /* AlbumTableViewModel.swift in Sources */,
 				80B9D7692639F4B100FACE63 /* LocalEndpoint.swift in Sources */,
 				807CE9472632178600900F95 /* NetworkErrors.swift in Sources */,
 				80B9D783263A0C5800FACE63 /* Alert.swift in Sources */,
 				80B9D788263A164B00FACE63 /* CheckWhichError.swift in Sources */,
 				807CE9262631C5CD00900F95 /* SceneDelegate.swift in Sources */,
-				80B9D77A263A057300FACE63 /* RecipiesEndpoint.swift in Sources */,
+				80B9D77A263A057300FACE63 /* RecipesEndpoint.swift in Sources */,
 				807CE9412631EDD100900F95 /* Album.swift in Sources */,
 				80B9D77E263A067A00FACE63 /* Recipe.swift in Sources */,
 			);

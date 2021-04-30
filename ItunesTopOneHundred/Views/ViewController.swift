@@ -9,34 +9,43 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //private let albumTableViewModel = AlbumTableViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkCaller.request(endpoint: ItunesEndpoint.getEndpoint) { (result: Result<Album, NetworkErrors>) in
-            switch result {
-            
-            case .success(let response):
-                print("Response: ", response)
-                
-            case .failure(let error):
-                
-                checkWhichError(error: error, vc: self)
-                
+
+        AlbumTableViewModel.callAPIForItunes { (model, error) in
+
+            guard error == nil else {
+
+                DispatchQueue.main.async {
+                    Alert.displayError(titleString: "Error", messageString: error ?? "Unknown Error", vc: self)
+                }
+
+                return
             }
+
+            print(model as Any)
+
+
         }
         
         
-        NetworkCaller.request(endpoint: RecipiesEndpoint.getEndpoint) { (result: Result<[Recipe], NetworkErrors>) in
-            switch result {
+        RecipeTableViewModel.callAPIForRecipes { (model, error) in
             
-            case .success(let response):
-                print("Response: ", response)
+            guard error == nil else {
                 
-            case .failure(let error):
+                DispatchQueue.main.async {
+                    Alert.displayError(titleString: "Error", messageString: error ?? "Unknown Error", vc: self)
+                }
                 
-                checkWhichError(error: error, vc: self)
-
+                return
             }
+            
+            print(model as Any)
+            
+
         }
         
     }
