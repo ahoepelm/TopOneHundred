@@ -15,21 +15,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
 
-        AlbumTableViewModel.callAPIForItunes { (model, error) in
-
-            guard error == nil else {
-
-                DispatchQueue.main.async {
-                    Alert.displayError(titleString: "Error", messageString: error ?? "Unknown Error", vc: self)
-                }
-
-                return
-            }
-
-            print(model as Any)
-
-
-        }
+//        AlbumTableViewModel.callAPIForItunes { (model, error) in
+//
+//            guard error == nil else {
+//
+//                DispatchQueue.main.async {
+//                    Alert.displayError(titleString: "Error", messageString: error ?? "Unknown Error", vc: self)
+//                }
+//
+//                return
+//            }
+//
+//            print(model as Any)
+//
+//
+//        }
         
         
         RecipeTableViewModel.callAPIForRecipes { (model, error) in

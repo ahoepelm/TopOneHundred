@@ -18,6 +18,8 @@
 		807CE9412631EDD100900F95 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9402631EDD100900F95 /* Album.swift */; };
 		807CE9442631F0E100900F95 /* NetworkCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9432631F0E100900F95 /* NetworkCaller.swift */; };
 		807CE9472632178600900F95 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9462632178600900F95 /* NetworkErrors.swift */; };
+		808BC4502641989C00148D6E /* AlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BC44F2641989C00148D6E /* AlbumTableViewController.swift */; };
+		808BC4532643357300148D6E /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BC4522643357300148D6E /* AlbumTableViewCell.swift */; };
 		80B9D7692639F4B100FACE63 /* LocalEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D7682639F4B100FACE63 /* LocalEndpoint.swift */; };
 		80B9D76D2639FCC100FACE63 /* Itunes100.json in Resources */ = {isa = PBXBuildFile; fileRef = 80B9D76C2639FCC100FACE63 /* Itunes100.json */; };
 		80B9D77A263A057300FACE63 /* RecipesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D779263A057300FACE63 /* RecipesEndpoint.swift */; };
@@ -42,6 +44,8 @@
 		807CE9402631EDD100900F95 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		807CE9432631F0E100900F95 /* NetworkCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCaller.swift; sourceTree = "<group>"; };
 		807CE9462632178600900F95 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		808BC44F2641989C00148D6E /* AlbumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewController.swift; sourceTree = "<group>"; };
+		808BC4522643357300148D6E /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		80B9D7682639F4B100FACE63 /* LocalEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEndpoint.swift; sourceTree = "<group>"; };
 		80B9D76C2639FCC100FACE63 /* Itunes100.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Itunes100.json; sourceTree = "<group>"; };
 		80B9D779263A057300FACE63 /* RecipesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesEndpoint.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				807CE9272631C5CD00900F95 /* ViewController.swift */,
+				808BC44F2641989C00148D6E /* AlbumTableViewController.swift */,
+				808BC4522643357300148D6E /* AlbumTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,8 +224,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				807CE9442631F0E100900F95 /* NetworkCaller.swift in Sources */,
+				808BC4502641989C00148D6E /* AlbumTableViewController.swift in Sources */,
 				807CE9282631C5CD00900F95 /* ViewController.swift in Sources */,
 				80CC259F263C7CDE006148CB /* RecipeTableViewModel.swift in Sources */,
+				808BC4532643357300148D6E /* AlbumTableViewCell.swift in Sources */,
 				807CE9242631C5CD00900F95 /* AppDelegate.swift in Sources */,
 				807CE93D2631E11C00900F95 /* ItunesEndpoint.swift in Sources */,
 				807CE93A2631D16700900F95 /* Endpoint.swift in Sources */,

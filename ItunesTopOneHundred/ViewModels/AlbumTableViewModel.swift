@@ -9,14 +9,14 @@ import Foundation
 
 struct AlbumTableViewModel {
     
-    static func callAPIForItunes(completion: @escaping (Album?, String?) -> Void) {
+    static func callAPIForItunes(completion: @escaping ([Results]?, String?) -> Void) {
         
         NetworkCaller.request(endpoint: ItunesEndpoint.getEndpoint) { (result: Result<Album, NetworkErrors>) in
             switch result {
             
             case .success(let response):
                 
-                completion(response, nil)
+                completion(response.feed.results, nil)
                 
             case .failure(let error):
                 
@@ -29,6 +29,7 @@ struct AlbumTableViewModel {
                 case .unableToComplete:
                     
                     completion(nil, "Unable to continue with request")
+                    
                 case .invalidData:
                     
                     completion(nil, "The data received was invalid")
