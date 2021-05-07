@@ -25,6 +25,8 @@ class AlbumTableViewController: UIViewController {
         view.addSubview(albumTableView)
         
         setupConstraints()
+        registerCell()
+        
         navigationItem.title = "Top 100 Albums"
         
         getAlbums()
@@ -64,6 +66,13 @@ class AlbumTableViewController: UIViewController {
         }
     }
     
+    // Register the cell
+    private func registerCell() {
+        
+        albumTableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "albumCell")
+        
+    }
+    
     // Set constraints for table view
     private func setupConstraints() {
         
@@ -77,11 +86,8 @@ class AlbumTableViewController: UIViewController {
         albumTableView.dataSource = self
         albumTableView.delegate = self
 
-        albumTableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "albumCell")
-
     }
-    
-    
+        
 }
 
 // MARK: - Extensions
