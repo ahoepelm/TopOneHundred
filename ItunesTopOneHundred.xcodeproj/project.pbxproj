@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		803A66D22645995A009EF74F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803A66D12645995A009EF74F /* ImageDownloader.swift */; };
 		807CE9242631C5CD00900F95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9232631C5CD00900F95 /* AppDelegate.swift */; };
 		807CE9262631C5CD00900F95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9252631C5CD00900F95 /* SceneDelegate.swift */; };
 		807CE9282631C5CD00900F95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9272631C5CD00900F95 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		803A66D12645995A009EF74F /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		807CE9202631C5CD00900F95 /* ItunesTopOneHundred.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItunesTopOneHundred.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807CE9232631C5CD00900F95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		807CE9252631C5CD00900F95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				807CE9432631F0E100900F95 /* NetworkCaller.swift */,
 				807CE9462632178600900F95 /* NetworkErrors.swift */,
+				803A66D12645995A009EF74F /* ImageDownloader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				807CE93A2631D16700900F95 /* Endpoint.swift in Sources */,
 				80CC259C263C586B006148CB /* AlbumTableViewModel.swift in Sources */,
 				807CE9472632178600900F95 /* NetworkErrors.swift in Sources */,
+				803A66D22645995A009EF74F /* ImageDownloader.swift in Sources */,
 				80B9D783263A0C5800FACE63 /* Alert.swift in Sources */,
 				80B9D788263A164B00FACE63 /* CheckWhichError.swift in Sources */,
 				807CE9262631C5CD00900F95 /* SceneDelegate.swift in Sources */,

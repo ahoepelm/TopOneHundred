@@ -11,15 +11,15 @@ class AlbumTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
-    private let containerView:UIView = {
+    private let containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true // this will make sure its children do not go out of the boundary
         return view
     }()
     
-    private let albumImageView:UIImageView = {
-        let img = UIImageView()
+    private let albumImageView: ImageDownloader = {
+        let img = ImageDownloader()
         img.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
         img.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
         img.layer.cornerRadius = 15
@@ -27,7 +27,7 @@ class AlbumTableViewCell: UITableViewCell {
         return img
     }()
     
-    private let nameLabel:UILabel = {
+    private let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textColor = .black
@@ -35,7 +35,7 @@ class AlbumTableViewCell: UITableViewCell {
         return label
     }()
     
-    private let artistLabel:UILabel = {
+    private let artistLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor =  .white
@@ -46,27 +46,18 @@ class AlbumTableViewCell: UITableViewCell {
         return label
     }()
     
-    var album:Results? {
+    var album: Results? {
         didSet {
             guard let albumItem = album else {return}
             let name = albumItem.name
             
-            if let imageUrl:NSURL = NSURL(string: albumItem.mediaUrl) {
-                
-                // Lets get the images in the background
-                DispatchQueue.global(qos: .userInitiated).async {
-                    
-                    let imageData:NSData = NSData(contentsOf: imageUrl as URL)!
-                    
-                    // Update the image via on the main thread
-                    DispatchQueue.main.async {
-                        
-                        let image = UIImage(data: imageData as Data)
-                        self.albumImageView.image = image
-                    }
-                } // DispatchQueue global
+            guard let imageURL = URL(string: albumItem.mediaUrl) else {
+                return
             }
-
+            
+            // Ask for image to be downloaded
+            albumImageView.loadImage(imageURL: imageURL, placeHolderImage: "")
+            
             nameLabel.text = name
             
             let artist = albumItem.artistName
@@ -78,17 +69,25 @@ class AlbumTableViewCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
-    }
         
+    }
+    
     // MARK: - Private Method
-
+    
     private override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.contentView.addSubview(albumImageView)
         containerView.addSubview(nameLabel)
         containerView.addSubview(artistLabel)
         self.contentView.addSubview(containerView)
+        
+        setupConstraints()
+        
+    }
+    
+    private func setupConstraints() {
         
         // Lets add contraints
         albumImageView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
@@ -109,7 +108,7 @@ class AlbumTableViewCell: UITableViewCell {
         artistLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
         artistLabel.topAnchor.constraint(equalTo:self.nameLabel.bottomAnchor).isActive = true
         artistLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
-
+        
     }
     
 }
