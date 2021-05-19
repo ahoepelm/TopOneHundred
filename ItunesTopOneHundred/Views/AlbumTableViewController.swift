@@ -95,6 +95,7 @@ class AlbumTableViewController: UIViewController {
 extension AlbumTableViewController: UITableViewDelegate {
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         albumArray.count
     }
     
@@ -103,10 +104,12 @@ extension AlbumTableViewController: UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as! AlbumTableViewCell
         
         cell.album = albumArray[indexPath.row]
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return 75
     }
 }
@@ -114,18 +117,19 @@ extension AlbumTableViewController: UITableViewDelegate {
 extension AlbumTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let album = albumArray[indexPath.row]
-//        let detailVC = AlbumDetailView()
-//        detailVC.albumName = album.name
-//        detailVC.artist = album.artistName
-//        detailVC.genre = album.genres.first?.name ?? ""
-//        detailVC.releaseDate = album.releaseDate
-//        detailVC.copyRight = album.copyright
-//        detailVC.albumArt = album.mediaUrl
-//        detailVC.albumUrl = album.url
-//
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        show(detailVC, sender: self)
+        
+        let album = albumArray[indexPath.row]
+        let detailVC = AlbumDetailView()
+        detailVC.albumName = album.name
+        detailVC.artist = album.artistName
+        detailVC.genre = album.genres.first?.name ?? ""
+        detailVC.releaseDate = album.releaseDate
+        detailVC.copyRight = album.copyright
+        detailVC.albumArt = album.mediaUrl
+        detailVC.albumURL = album.url
+
+        tableView.deselectRow(at: indexPath, animated: true)
+        show(detailVC, sender: self)
     }
     
 }

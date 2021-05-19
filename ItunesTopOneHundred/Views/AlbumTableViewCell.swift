@@ -12,6 +12,7 @@ class AlbumTableViewCell: UITableViewCell {
     // MARK: - Properties
     
     private let containerView: UIView = {
+        
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true // this will make sure its children do not go out of the boundary
@@ -19,6 +20,7 @@ class AlbumTableViewCell: UITableViewCell {
     }()
     
     private let albumImageView: ImageDownloader = {
+
         let img = ImageDownloader()
         img.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
         img.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
@@ -28,6 +30,7 @@ class AlbumTableViewCell: UITableViewCell {
     }()
     
     private let nameLabel: UILabel = {
+        
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textColor = .black
@@ -36,6 +39,7 @@ class AlbumTableViewCell: UITableViewCell {
     }()
     
     private let artistLabel: UILabel = {
+        
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor =  .white
@@ -47,17 +51,20 @@ class AlbumTableViewCell: UITableViewCell {
     }()
     
     var album: Results? {
+        
         didSet {
             guard let albumItem = album else {return}
-            let name = albumItem.name
+            
             
             guard let imageURL = URL(string: albumItem.mediaUrl) else {
                 return
             }
             
             // Ask for image to be downloaded
-            albumImageView.loadImage(imageURL: imageURL, placeHolderImage: "")
+            //print(imageURL)
+            albumImageView.loadImage(imageURL: imageURL, placeHolderImage: "AlbumPlaceholder")
             
+            let name = albumItem.name
             nameLabel.text = name
             
             let artist = albumItem.artistName
@@ -108,6 +115,17 @@ class AlbumTableViewCell: UITableViewCell {
         artistLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
         artistLabel.topAnchor.constraint(equalTo:self.nameLabel.bottomAnchor).isActive = true
         artistLabel.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
+        
+    }
+    
+    // MARK: - Overrides
+
+    override func prepareForReuse() {
+        
+        super.prepareForReuse()
+        
+        // Reset Thumbnail Image View
+        albumImageView.image = nil
         
     }
     

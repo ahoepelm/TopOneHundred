@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		803A66D22645995A009EF74F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803A66D12645995A009EF74F /* ImageDownloader.swift */; };
+		803A66D52645B4AD009EF74F /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803A66D42645B4AD009EF74F /* AlbumDetailView.swift */; };
 		807CE9242631C5CD00900F95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9232631C5CD00900F95 /* AppDelegate.swift */; };
 		807CE9262631C5CD00900F95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9252631C5CD00900F95 /* SceneDelegate.swift */; };
-		807CE9282631C5CD00900F95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9272631C5CD00900F95 /* ViewController.swift */; };
 		807CE92B2631C5CD00900F95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807CE9292631C5CD00900F95 /* Main.storyboard */; };
 		807CE92D2631C5CE00900F95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 807CE92C2631C5CE00900F95 /* Assets.xcassets */; };
 		807CE9302631C5CE00900F95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 807CE92E2631C5CE00900F95 /* LaunchScreen.storyboard */; };
@@ -21,20 +21,17 @@
 		807CE9472632178600900F95 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807CE9462632178600900F95 /* NetworkErrors.swift */; };
 		808BC4502641989C00148D6E /* AlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BC44F2641989C00148D6E /* AlbumTableViewController.swift */; };
 		808BC4532643357300148D6E /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808BC4522643357300148D6E /* AlbumTableViewCell.swift */; };
-		80B9D77A263A057300FACE63 /* RecipesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D779263A057300FACE63 /* RecipesEndpoint.swift */; };
-		80B9D77E263A067A00FACE63 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D77D263A067A00FACE63 /* Recipe.swift */; };
 		80B9D783263A0C5800FACE63 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D782263A0C5800FACE63 /* Alert.swift */; };
 		80B9D788263A164B00FACE63 /* CheckWhichError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B9D787263A164B00FACE63 /* CheckWhichError.swift */; };
 		80CC259C263C586B006148CB /* AlbumTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CC259B263C586B006148CB /* AlbumTableViewModel.swift */; };
-		80CC259F263C7CDE006148CB /* RecipeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CC259E263C7CDE006148CB /* RecipeTableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		803A66D12645995A009EF74F /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		803A66D42645B4AD009EF74F /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
 		807CE9202631C5CD00900F95 /* ItunesTopOneHundred.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItunesTopOneHundred.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807CE9232631C5CD00900F95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		807CE9252631C5CD00900F95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		807CE9272631C5CD00900F95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		807CE92A2631C5CD00900F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		807CE92C2631C5CE00900F95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		807CE92F2631C5CE00900F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,12 +43,9 @@
 		807CE9462632178600900F95 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		808BC44F2641989C00148D6E /* AlbumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewController.swift; sourceTree = "<group>"; };
 		808BC4522643357300148D6E /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
-		80B9D779263A057300FACE63 /* RecipesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesEndpoint.swift; sourceTree = "<group>"; };
-		80B9D77D263A067A00FACE63 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		80B9D782263A0C5800FACE63 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		80B9D787263A164B00FACE63 /* CheckWhichError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckWhichError.swift; sourceTree = "<group>"; };
 		80CC259B263C586B006148CB /* AlbumTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewModel.swift; sourceTree = "<group>"; };
-		80CC259E263C7CDE006148CB /* RecipeTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +62,7 @@
 		803A66C926446325009EF74F /* NetworkEndpoints */ = {
 			isa = PBXGroup;
 			children = (
-				807CE9392631D16700900F95 /* Endpoint.swift */,
 				807CE93C2631E11C00900F95 /* ItunesEndpoint.swift */,
-				80B9D779263A057300FACE63 /* RecipesEndpoint.swift */,
 			);
 			path = NetworkEndpoints;
 			sourceTree = "<group>";
@@ -85,6 +77,14 @@
 				807CE92E2631C5CE00900F95 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		80753415264B13F400DF8B56 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				807CE9392631D16700900F95 /* Endpoint.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		807CE9172631C5CD00900F95 = {
@@ -113,6 +113,7 @@
 				80B9D761263876C100FACE63 /* Views */,
 				807CE93F2631E36400900F95 /* Model */,
 				803A66C926446325009EF74F /* NetworkEndpoints */,
+				80753415264B13F400DF8B56 /* Protocols */,
 				807CE9382631CCF600900F95 /* Services */,
 			);
 			path = ItunesTopOneHundred;
@@ -132,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				807CE9402631EDD100900F95 /* Album.swift */,
-				80B9D77D263A067A00FACE63 /* Recipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,9 +140,9 @@
 		80B9D761263876C100FACE63 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				807CE9272631C5CD00900F95 /* ViewController.swift */,
 				808BC44F2641989C00148D6E /* AlbumTableViewController.swift */,
 				808BC4522643357300148D6E /* AlbumTableViewCell.swift */,
+				803A66D42645B4AD009EF74F /* AlbumDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				80CC259B263C586B006148CB /* AlbumTableViewModel.swift */,
-				80CC259E263C7CDE006148CB /* RecipeTableViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -237,8 +236,6 @@
 			files = (
 				807CE9442631F0E100900F95 /* NetworkCaller.swift in Sources */,
 				808BC4502641989C00148D6E /* AlbumTableViewController.swift in Sources */,
-				807CE9282631C5CD00900F95 /* ViewController.swift in Sources */,
-				80CC259F263C7CDE006148CB /* RecipeTableViewModel.swift in Sources */,
 				808BC4532643357300148D6E /* AlbumTableViewCell.swift in Sources */,
 				807CE9242631C5CD00900F95 /* AppDelegate.swift in Sources */,
 				807CE93D2631E11C00900F95 /* ItunesEndpoint.swift in Sources */,
@@ -248,10 +245,9 @@
 				803A66D22645995A009EF74F /* ImageDownloader.swift in Sources */,
 				80B9D783263A0C5800FACE63 /* Alert.swift in Sources */,
 				80B9D788263A164B00FACE63 /* CheckWhichError.swift in Sources */,
+				803A66D52645B4AD009EF74F /* AlbumDetailView.swift in Sources */,
 				807CE9262631C5CD00900F95 /* SceneDelegate.swift in Sources */,
-				80B9D77A263A057300FACE63 /* RecipesEndpoint.swift in Sources */,
 				807CE9412631EDD100900F95 /* Album.swift in Sources */,
-				80B9D77E263A067A00FACE63 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
