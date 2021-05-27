@@ -61,7 +61,6 @@ class AlbumTableViewCell: UITableViewCell {
             }
             
             // Ask for image to be downloaded
-            //print(imageURL)
             albumImageView.loadImage(imageURL: imageURL, placeHolderImage: "AlbumPlaceholder")
             
             let name = albumItem.name
@@ -79,16 +78,16 @@ class AlbumTableViewCell: UITableViewCell {
         
     }
     
-    // MARK: - Private Method
+    // MARK: - Private Methods
     
     private override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.contentView.addSubview(albumImageView)
+        contentView.addSubview(albumImageView)
         containerView.addSubview(nameLabel)
         containerView.addSubview(artistLabel)
-        self.contentView.addSubview(containerView)
+        contentView.addSubview(containerView)
         
         setupConstraints()
         

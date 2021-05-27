@@ -167,7 +167,6 @@ class AlbumDetailView: UIViewController, NSCacheDelegate {
         }
 
         // Ask for image to be downloaded
-        //print("Get image : \(imageURL)")
         albumImageView.loadImage(imageURL: imageURL, placeHolderImage: "AlbumPlaceholder")
     }
     

@@ -25,8 +25,6 @@ class ImageDownloader : UIImageView {
             self.image = UIImage(named: placeHolderImage)
         }
         
-        
-        
         // Check if we already have the image and use it
         if let cachedImage = imageCache.object(forKey: imageURL as AnyObject) {
             
