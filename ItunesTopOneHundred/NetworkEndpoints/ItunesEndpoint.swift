@@ -23,7 +23,7 @@ enum ItunesEndpoint: Endpoint {
         
         switch self {
             default:
-                return "rss.itunes.apple.com"
+                return "rss.applemarketingtools.com"
         }
     }
     
@@ -31,7 +31,7 @@ enum ItunesEndpoint: Endpoint {
         
         switch self {
             case .getEndpoint:
-                return "/api/v1/us/apple-music/top-albums/all/100/explicit.json"
+                return "/api/v2/us/music/most-played/10/albums.json"
         }
         
     }

@@ -27,7 +27,7 @@ class AlbumTableViewController: UIViewController {
         setupConstraints()
         registerCell()
         
-        navigationItem.title = "Top 100 Albums"
+        navigationItem.title = "Top 10 Played Albums"
         
         getAlbums()
 
@@ -124,7 +124,6 @@ extension AlbumTableViewController: UITableViewDataSource {
         detailVC.artist = album.artistName
         detailVC.genre = album.genres.first?.name ?? ""
         detailVC.releaseDate = album.releaseDate
-        detailVC.copyRight = album.copyright
         detailVC.albumArt = album.mediaUrl
         detailVC.albumURL = album.url
 

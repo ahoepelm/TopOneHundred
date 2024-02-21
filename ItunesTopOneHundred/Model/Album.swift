@@ -22,11 +22,8 @@ struct Results: Codable {
 
     let name: String
     let artistName: String
-
     let releaseDate: String
     let mediaUrl : String
-    let copyright: String
-
     let genres: [Genres]
     let url: String
 }
@@ -38,7 +35,6 @@ extension Results {
         case artistName
         case releaseDate
         case mediaUrl = "artworkUrl100"
-        case copyright
         case genres
         case url
 

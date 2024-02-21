@@ -12,6 +12,8 @@ class AlbumDetailView: UIViewController, NSCacheDelegate {
     
     // MARK: - Properties
     
+    let albumStoreBtn = UIButton()
+    let albumStoreBtnTitle = "See in Apple Music"
     private let nameLabel: UILabel = {
         
         let label = UILabel()
@@ -83,20 +85,6 @@ class AlbumDetailView: UIViewController, NSCacheDelegate {
         return img
     }()
     
-    private let albumStoreBtn:UIButton = {
-        
-        let btn = UIButton()
-        btn.setTitle("See in Apple Music", for: .normal)
-        btn.setTitleColor(.black, for: .normal)
-        btn.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        btn.layer.cornerRadius = 6.0
-        btn.layer.borderWidth = 2
-        btn.layer.borderColor = UIColor.blue.cgColor
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
-        return btn
-    }()
-    
     var albumName = String()
     var artist = String()
     var genre = String()
@@ -114,6 +102,9 @@ class AlbumDetailView: UIViewController, NSCacheDelegate {
 
         view.backgroundColor = .white
 
+        // setup button
+        setupBtn()
+        
         // add the sub views
         addSubViews()
         
@@ -132,9 +123,22 @@ class AlbumDetailView: UIViewController, NSCacheDelegate {
     
     @objc private func btnTapped() {
         
+        // Simulator states invalid url but it is verified
         if let url = URL(string: albumURL) {
             UIApplication.shared.open(url)
         }
+    }
+    
+    private func setupBtn() {
+        
+        albumStoreBtn.setTitle(albumStoreBtnTitle, for: .normal)
+        albumStoreBtn.setTitleColor(.black, for: .normal)
+        albumStoreBtn.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        albumStoreBtn.layer.cornerRadius = 6.0
+        albumStoreBtn.layer.borderWidth = 2
+        albumStoreBtn.layer.borderColor = UIColor.blue.cgColor
+        albumStoreBtn.translatesAutoresizingMaskIntoConstraints = false
+        albumStoreBtn.addTarget(self, action: #selector(btnTapped), for: .touchUpInside)
     }
     
     private func addSubViews() {
@@ -183,43 +187,43 @@ class AlbumDetailView: UIViewController, NSCacheDelegate {
         let labelSpacing: CGFloat = 55
         let genreSpacing: CGFloat = 65
         
-        // Album art constarints
+        // Album art constraints
         albumImageView.topAnchor.constraint(equalTo:view.safeAreaLayoutGuide.topAnchor, constant: anchorSpacing).isActive = true
         albumImageView.widthAnchor.constraint(equalTo:view.widthAnchor, multiplier: half).isActive = true
         albumImageView.heightAnchor.constraint(equalTo:view.heightAnchor, multiplier: quarter).isActive = true
         albumImageView.centerXAnchor.constraint(equalTo:view.centerXAnchor).isActive = true
         
-        // Album title constarints
+        // Album title constraints
         nameLabel.topAnchor.constraint(equalTo:albumImageView.topAnchor, constant: labelImgSpacing).isActive = true
         nameLabel.widthAnchor.constraint(equalTo:view.widthAnchor, multiplier: threeQuarter).isActive = true
         nameLabel.heightAnchor.constraint(equalTo:view.heightAnchor, constant: labelHeight).isActive = true
         nameLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor).isActive = true
         
-        // Album artists constarints
+        // Album artists constraints
         artistLabel.topAnchor.constraint(equalTo:nameLabel.topAnchor, constant: genreSpacing).isActive = true
         artistLabel.widthAnchor.constraint(equalTo:view.widthAnchor, multiplier: threeQuarter).isActive = true
         artistLabel.heightAnchor.constraint(equalTo:view.heightAnchor, constant: labelHeight).isActive = true
         artistLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor).isActive = true
         
-        // Album genre constarints
+        // Album genre constraints
         genreLabel.topAnchor.constraint(equalTo:artistLabel.topAnchor, constant: labelSpacing).isActive = true
         genreLabel.widthAnchor.constraint(equalTo:view.widthAnchor, multiplier: threeQuarter).isActive = true
         genreLabel.heightAnchor.constraint(equalTo:view.heightAnchor, constant: labelHeight).isActive = true
         genreLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor).isActive = true
         
-        // Album date constarints
+        // Album date constraints
         dateLabel.topAnchor.constraint(equalTo:genreLabel.topAnchor, constant: labelSpacing).isActive = true
         dateLabel.widthAnchor.constraint(equalTo:view.widthAnchor, multiplier: threeQuarter).isActive = true
         dateLabel.heightAnchor.constraint(equalTo:view.heightAnchor, constant: labelHeight).isActive = true
         dateLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor).isActive = true
         
-        // Album copyright constarints
+        // Album copyright constraints
         copyRightLabel.topAnchor.constraint(equalTo:dateLabel.topAnchor, constant: genreSpacing).isActive = true
         copyRightLabel.widthAnchor.constraint(equalTo:view.widthAnchor, multiplier: threeQuarter).isActive = true
         copyRightLabel.heightAnchor.constraint(equalTo:view.heightAnchor, constant: labelHeight).isActive = true
         copyRightLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor).isActive = true
         
-        // Album store button constarints
+        // Album store button constraints
         albumStoreBtn.leadingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leadingAnchor, constant: anchorSpacing).isActive = true
         albumStoreBtn.trailingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.trailingAnchor, constant: anchorSpacingNeg).isActive = true
         albumStoreBtn.bottomAnchor.constraint(equalTo:view.safeAreaLayoutGuide.bottomAnchor, constant: anchorSpacingNeg).isActive = true
